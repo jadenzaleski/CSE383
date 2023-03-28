@@ -1,0 +1,15 @@
+<FilesMatch ".(jpg|gif|png|php|css|tgz)$">
+    Order Deny,Allow
+    Allow from all
+    Satisfy Any
+</FilesMatch>
+#Protect Directory
+ #password protect excluding specific ip
+ AuthName "Username and password required"
+ AuthUserFile /home/ubuntu/.htpasswd
+ AuthType Basic
+ Require valid-user
+ Order Deny,Allow
+ Deny from all
+ Satisfy Any
+
